@@ -26,11 +26,16 @@ jobs:
               with:
                   node-version: "20"
 
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v1
+
             - name: Install dependencies
-              run: npm install
+              run: bun install
 
             - name: Build
-              run: npm run build
+              env:
+                  BASE_URL: /${{ github.event.repository.name }}/
+              run: bun run build
 
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
