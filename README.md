@@ -117,42 +117,13 @@ bun run preview
 bun run lint
 ```
 
-## GitHub Pages Deployment
+## Deployment
 
-This project is configured to deploy to GitHub Pages automatically.
+This project is automatically deployed to Netlify from the main branch.
 
-### Initial Setup
+**Live Site:** https://feebleio.netlify.app/
 
-1. **Push to GitHub** - Ensure your code is pushed to the `main` branch
-2. **Enable GitHub Pages** - Go to repository Settings → Pages → Source → Deploy from a branch
-3. **Select Branch** - Choose `gh-pages` branch (will be created automatically on first deployment)
-
-### Automatic Deployment
-
-The project uses GitHub Actions to automatically build and deploy on every push to the `main` branch. The workflow:
-
-- Triggers on push to `main`
-- Installs dependencies
-- Builds the project with `npm run build`
-- Deploys to GitHub Pages
-
-View the workflow status in the Actions tab of your repository.
-
-### Manual Deployment
-
-To manually deploy locally:
-
-```bash
-# Install gh-pages globally
-npm install -g gh-pages
-
-# Deploy
-bun run deploy
-```
-
-### Access Your Site
-
-Your site will be available at: `https://yourusername.github.io/feeble.io/`
+Deployments are triggered on every push to the main branch. View deployment status and logs in the Netlify dashboard.
 
 ## Browser Support
 
